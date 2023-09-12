@@ -2,3 +2,4 @@ test_imgs
 onnx_models
 model_weights
 tensorrt_models
+blip2_onnx_full_model_export
