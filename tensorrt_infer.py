@@ -7,8 +7,8 @@ import torch
 import cv2
 import time
 
-test_img_path = "/data/beit3_trt_convert/test_imgs/frame_2.png"
-img_trt_model_path = "./tensorrt_models/beit3_retrival_coco_img_fp16_mine.trt"
+test_img_path = "/data/caoxh/code/my_beit3_convert/test_imgs/frame_2.png"
+img_trt_model_path = "/data/caoxh/code/my_beit3_convert/tensorrt_models/beit3_retrival_coco_img_fp16_mine.trt"
 input_size = 384
 input_img = cv2.imread(test_img_path)
 transform = transforms.Compose([
@@ -35,7 +35,7 @@ print(image_feature)
 
 test_prompt = ['a picture of a dog', 'a picture of a cat']
 
-tokenizer = XLMRobertaTokenizer('/data/beit3_trt_convert/model_weights/beit3.spm')
+tokenizer = XLMRobertaTokenizer('/data/caoxh/code/my_beit3_convert/model_weights/beit3.spm')
 bos_token_id = tokenizer.bos_token_id
 eos_token_id = tokenizer.eos_token_id
 pad_token_id = tokenizer.pad_token_id

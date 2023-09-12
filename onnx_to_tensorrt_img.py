@@ -13,7 +13,7 @@ if __name__ == '__main__':
     #                                     (3, 3, 384, 384), 'input_img')]
     # print(f"vision_input_shape_name: {vision_input_shape[0].input_name}")
     
-    input_vision_onnx_path = '/data/beit3_trt_convert/onnx_models/beit3_retrival_coco_img_constant.onnx'
+    input_vision_onnx_path = '/data/caoxh/code/my_beit3_convert/model_weights/beit3_retrival_coco_img_constant.onnx'
     # input_vision_onnx_path="/data/clip_trt/convert_output/ViT-L_14@336px.fp16.onnx"
     engine = my_build_engine(
                 runtime=runtime,
@@ -23,6 +23,6 @@ if __name__ == '__main__':
                 fp16=True,
                 int8=False,
             )
-    vision_fp32_trt_path = '/data/beit3_trt_convert/tensorrt_models/beit3_retrival_coco_img_fp16_mine.trt'
+    vision_fp32_trt_path = '/data/caoxh/code/my_beit3_convert/tensorrt_models/beit3_retrival_coco_img_fp16_mine.trt'
     with open(vision_fp32_trt_path, 'wb') as f:
                 f.write(bytearray(engine.serialize()))

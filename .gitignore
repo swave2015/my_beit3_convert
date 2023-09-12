@@ -1,1 +1,4 @@
 test_imgs
+onnx_models
+model_weights
+tensorrt_models
