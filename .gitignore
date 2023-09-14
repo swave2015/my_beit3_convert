@@ -6,3 +6,6 @@ blip2_onnx_full_model_export
 blip2_trt_models
 huggingface_cache
 test_videos
+results
+runs
+outputs
